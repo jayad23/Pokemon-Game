@@ -15,7 +15,6 @@ body{
     justify-content: center;
     text-align: center;
     align-items: center;
-    
 }
 
 #start>button{
@@ -42,8 +41,7 @@ body{
 
 #character{
     position: relative;
-    top: 140px;
-    left: 20px;    
+    top: 140px;   
 }
 
 .animate{
@@ -75,7 +73,7 @@ body{
 
 @keyframes block{
     0%{left: 478px;}
-    100%{left: -40px;}
+    100%{left: -60px;}
 }
 
 @keyframes jump{
