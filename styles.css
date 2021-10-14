@@ -63,7 +63,7 @@ body{
 }
 
 .animateBall{
-    animation: block 1s infinite;
+    animation: block 2s infinite;
 }
 
 #block>img{
