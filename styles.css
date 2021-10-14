@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(wallpaper.jpg);
+}
+
+#game{
+    width: 500px;
+    height: 200px;
+    border: 4px solid white;
+    margin: 0 auto;
+    margin-top: 200px;
+    overflow: hidden;
+    background: url(landscape.jpg);
+}
+
+#character{
+    position: relative;
+    top: 140px;    
+}
+
+.animate{
+    animation: jump 500ms;
+}
+
+#character>img{
+    width: 70px;
+    height: 50px;
+    
+}
+
+#block{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 115px;
+    left: 470px;
+    animation: block 1s infinite;
+}
+
+#block>img{
+    width: 20px;
+    height: 20px;
+}
+
+@keyframes block{
+    0%{left: 478px;}
+    100%{left: -40px;}
+}
+
+@keyframes jump{
+    0%{top: 150px;}
+    30%{top: 100px;}
+    70%{top: 100px;}
+    100%{top: 150px;}
+}
