@@ -44,7 +44,7 @@ window.addEventListener('DOMContentLoaded', e =>{
             let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"))
             if (blockLeft < 20 && blockLeft > 0 && characterTop >= 130){
                 block.classList.remove('animateBall')
-                alert("U just Lose! ;) Atte: Kike")
+                alert("You lose! created by Jaider Vanegas")
                 game.style.visibility = "hidden"
                 againButton.style.visibility = "visible"
 
