@@ -1,8 +1,9 @@
 window.addEventListener('DOMContentLoaded', e =>{
-    
+    const againButton = document.getElementById('again')
     const startDiv = document.getElementById('start')
     const startButton = document.getElementById('start')
     startButton.addEventListener('click', (e) => clicked(e))
+    againButton.addEventListener('click', (e) => again(e))
 
     function clicked (event){
         startDiv.style.display = "none"
@@ -11,6 +12,14 @@ window.addEventListener('DOMContentLoaded', e =>{
         block.classList = ('animateBall')
     }
 
+    function again(){
+        againButton.style.visibility = 'hidden'
+        game.style.visibility = 'visible'
+        block.classList = 'animateBall'
+        block.style.display = 'visible'
+        gamePoke()
+    }
+   
     function gamePoke (){
         const character = document.getElementById('character')
         const block = document.getElementById('block')
@@ -32,9 +41,11 @@ window.addEventListener('DOMContentLoaded', e =>{
             let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"))
             let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"))
             if (blockLeft < 20 && blockLeft > 0 && characterTop >= 130){
-            block.style.animation = "none"
-            block.style.display = "none"
-            alert("U just Lose! ;) Atte: Kike")
+                block.classList.remove('animateBall')
+                alert("U just Lose! ;) Atte: Kike")
+                game.style.visibility = "hidden"
+                againButton.style.visibility = "visible"
+
             }
         },10);
     }
