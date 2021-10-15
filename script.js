@@ -17,6 +17,8 @@ window.addEventListener('DOMContentLoaded', e =>{
         game.style.visibility = 'visible'
         block.classList = 'animateBall'
         block.style.display = 'visible'
+        character.classList.remove('animate')
+        jump()
         gamePoke()
     }
    
